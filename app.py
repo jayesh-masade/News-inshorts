@@ -56,7 +56,11 @@
 # if __name__ == "__main__":
 #     main()
 
-pip install transformers
+import subprocess
+def install_package(package):
+    subprocess.check_call(['pip', 'install', package])
+# Example usage
+install_package('transformers')
 import streamlit as st
 import requests
 from transformers import pipeline
