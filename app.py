@@ -64,7 +64,8 @@ API_KEY = 'd3d5f0b1cac34f6bb0e797e5af210804'  # Replace this with your actual Ne
 URL = 'https://newsapi.org/v2/top-headlines?'
 
 # Initialize the summarization pipeline
-summarizer = pipeline("summarization")
+summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
+
 
 def get_news(category='general', country='us'):
     """ Fetch news articles from the API based on category and country. """
